@@ -1,0 +1,153 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+.sky-layer {
+
+  width:1887px;
+  z-index: 1;
+  position:absolute;
+  top: calc(50% - 183px);
+  left: calc(50% - 0px);
+  transform:translate(-50%,-50%);
+
+}
+
+.leftcloud1-layer{
+  width:1200px;
+  z-index: 3;
+  position:absolute;
+  top: calc(50% + 10px);
+  left: calc(50% - 268px);
+  opacity:0;
+  transform:translate(-50%,-50%);
+  animation: visible 2s ease forwards;
+}
+
+.leftcloud2-layer {
+  opacity:0;
+  z-index: 2;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 220px);
+  width:1400px;
+  transform:translate(-50%,-50%);
+  animation: visible 2s ease forwards;
+}
+
+
+.rightcloud1-layer {
+  opacity:0;
+  z-index: 4;
+  position: absolute;
+  top: calc(50% + 20px);
+  left: calc(50% + 217px);
+  width:1400px;
+  transform:translate(-50%,-50%);
+  animation: visible 2s ease forwards;
+
+}
+
+
+
+.rightcloud2-layer {
+  opacity:0;
+  z-index: 5;
+  position: absolute;
+  top: calc(50% - 11px);
+  left: calc(50% + 217px);
+  width:1300px;
+  transform:translate(-50%,-50%);
+  animation: visible 2s ease forwards;
+
+}
+
+.person-layer {
+  z-index: 7;
+  position: absolute;
+  top: calc(50% + 67px);
+  left: calc(50% + 6px);
+  width:1056px;
+  transform:translate(-50%,-50%);
+  animation: slideFromBelow 1s ease forwards;
+}
+
+.text{
+  position: absolute;
+  z-index: 6;
+  top: calc(50% - 32px);
+  left: calc(50% + 6px);
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color:#fff;
+  pointer-events:auto;
+  animation: slideFromAbove 1s ease forwards;
+
+}
+
+
+.text h2{
+  font-weight: 100;
+  font-size: 6.5rem;
+  line-height: 0.88;
+ 
+}
+
+.text h2{
+  font-weight: 800;
+  font-size: 8rem;
+  line-height: 0.88;
+}
+
+
+.parallax{
+  pointer-events: none;
+  transition: 0.45s cubic-bezier(0.2,0.49,0.32,0.99);
+}
+
+
+@keyframes slideFromAbove {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: calc(50% - 83px);
+    opacity: 1;
+  }
+} 
+
+@keyframes visible {
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+    
+    opacity: 1;
+  }
+} 
+
+
+
+@keyframes slideFromBelow {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: calc(50% + 67px);
+    opacity: 1;
+  }
+}
+
